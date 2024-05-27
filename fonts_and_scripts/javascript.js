@@ -21,9 +21,35 @@ function main() {
     audio.volume = 1;
     audio.play();
 
+    // set up custom CSS variables for countdown text
+    // font size:
+    document.getElementById("countdown").style.fontSize = FONT_SIZE;
+    // text color:
+    if (TEXT_COLOR == "") {
+        document.querySelector(":root").style.setProperty("--text-color", "transparent");
+    }
+    else {
+        document.querySelector(":root").style.setProperty("--text-color", TEXT_COLOR);
+    }
+    // shadow color:
+    if (SHADOW_COLOR == "") {
+        document.querySelector(":root").style.setProperty("--shadow-color", "transparent");
+        document.getElementById("countdown").style.textShadow = "unset";
+    }
+    else {
+        document.querySelector(":root").style.setProperty("--shadow-color", SHADOW_COLOR);
+    }
+    // stroke color:
+    if (STROKE_COLOR == "") {
+        document.querySelector(":root").style.setProperty("--stroke-color", "transparent");
+        document.getElementById("countdown").style.webkitTextStroke = "unset";
+    }
+    else {
+        document.querySelector(":root").style.setProperty("--stroke-color", STROKE_COLOR);
+    }
+
     // set up first screen
     setBackground(getPathToPicture(PATH_TO_PICS, currentPictureNumber, PIC_FORMAT));
-    document.getElementById("countdown").style.fontSize = FONT_SIZE;
     document.getElementById("countdown").style.opacity = "1";
 
     // start countdown

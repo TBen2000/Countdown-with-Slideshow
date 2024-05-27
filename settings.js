@@ -18,6 +18,21 @@ const PIC_FORMAT = "jpg";
 const FONT_SIZE = "14vw";
 // (recommended: "14vw")
 
+// Text color (in HEX):
+const TEXT_COLOR = "#F8F5F4"
+// (recommended: "#F8F5F4")
+// Leave empty (const TEXT_COLOR = "") if no text color (transparent) is desired
+
+// Color of text shadow (in HEX):
+const SHADOW_COLOR = "#282925"
+// (recommended: "#282925")
+// Leave empty (const SHADOW_COLOR = "") if no shadow is desired
+
+// Color of text stroke (in HEX):
+const STROKE_COLOR = ""
+// (recommended: "")
+// Leave empty (const STROKE_COLOR = "") if no stroke is desired
+
 // Unit that is used for minutes:
 const UNIT_MINUTE = "m";
 
