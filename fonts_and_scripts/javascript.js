@@ -23,7 +23,9 @@ function main() {
 
     // set up custom CSS variables for countdown text
     // font size:
-    document.getElementById("countdown").style.fontSize = FONT_SIZE;
+    if (FONT_SIZE != "") {
+        document.querySelector(":root").style.setProperty("--font-size", FONT_SIZE);
+    }
     // text color:
     if (TEXT_COLOR == "") {
         document.querySelector(":root").style.setProperty("--text-color", "transparent");

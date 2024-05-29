@@ -17,7 +17,8 @@
         :root {
             --text-color: #F8F5F4;
             --shadow-color: #282925;
-            --stroke-color: #282925;
+            --stroke-color: transparent;
+            --font-size: 14vw;
         }
 
         body {
@@ -56,20 +57,21 @@
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             width: 95%;
-            font-size: 14vw;
-            color: var(--text-color);
             text-align: center;
-            font-family: smooch;
         }
 
         .countdown {
+            font-family: smooch;
+            color: var(--text-color);
+            font-size: var(--font-size);
             text-shadow: 0.3vw 0.3vw 0.8vw var(--shadow-color), -0.2vw 0.3vw 1.5vw var(--shadow-color);
             -webkit-text-stroke: 0.015em var(--stroke-color);
         }
 
         .clickToStart {
-            font-size: 2vw;
             font-family: montserrat;
+            color: var(--text-color);
+            font-size: 2vw;
         }
     </style>
 
