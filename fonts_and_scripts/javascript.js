@@ -51,7 +51,7 @@ function main() {
     }
 
     // set up first screen
-    setBackground(getPathToPicture(PATH_TO_PICS, currentPictureNumber, PIC_FORMAT));
+    setBackground(getPathToPicture(currentPictureNumber));
     document.getElementById("countdown").style.opacity = "1";
 
     // start countdown
@@ -124,9 +124,9 @@ function nextBackground() {
         setBackground("picture_end.jpg");
     }
     else {
-        setBackground(getPathToPicture(PATH_TO_PICS, currentPictureNumber, PIC_FORMAT));
+        setBackground(getPathToPicture(currentPictureNumber));
         currentPictureNumber += 1;
-        preloadImage(getPathToPicture(PATH_TO_PICS, currentPictureNumber, PIC_FORMAT));
+        preloadImage(getPathToPicture(currentPictureNumber));
     }
 }
 
@@ -150,8 +150,8 @@ function switchBackgroundOpacity() {
 }
 
 
-function getPathToPicture(directory, name, format) {
-    return directory + name + "." + format;
+function getPathToPicture(name) {
+    return PATH_TO_PICS + name + "." + PIC_FORMAT;
 }
 
 
